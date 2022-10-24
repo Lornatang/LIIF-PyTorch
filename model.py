@@ -64,7 +64,7 @@ class LIIF(nn.Module):
         ry = 2 / features.shape[-1] / 2
 
         features_coord = make_coord(features.shape[-2:], flatten=False).to(x.device)
-        features_coord = features_coord.permute(2, 0, 1).unsqueeze(0).expand(x.shape[0], 2, *x.shape[-2:])
+        features_coord = features_coord.permute(2, 0, 1).unsqueeze(0).expand(features.shape[0], 2, *features.shape[-2:])
 
         preds = []
         areas = []

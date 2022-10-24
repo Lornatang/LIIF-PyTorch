@@ -87,7 +87,7 @@ def make_coord(shape: list, ranges: list = None, flatten: bool = True) -> Tensor
         r = (v1 - v0) / (2 * n)
         seq = v0 + r + (2 * r) * torch.arange(n).float()
         coord_seqs.append(seq)
-    coord = torch.stack(torch.meshgrid(*coord_seqs, indexing="xy"), dim=-1)
+    coord = torch.stack(torch.meshgrid(*coord_seqs, indexing="ij"), dim=-1)
 
     if flatten:
         coord = coord.view(-1, coord.shape[-1])

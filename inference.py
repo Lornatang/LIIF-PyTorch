@@ -40,8 +40,7 @@ def build_model(model_arch_name: str, device: torch.device) -> nn.Module:
     # Initialize the super-resolution model
     sr_model = model.__dict__[model_arch_name](in_channels=3,
                                                encoder_channels=64,
-                                               out_channels=3,
-                                               channels=256)
+                                               out_channels=3)
     sr_model = sr_model.to(device=device)
 
     return sr_model
@@ -89,7 +88,7 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Using the model generator super-resolution images.")
     parser.add_argument("--model_arch_name",
                         type=str,
-                        default="lte_edsr")
+                        default="liif_edsr")
     parser.add_argument("--inputs_path",
                         type=str,
                         default="./figure/baboon_lr.png",
@@ -104,7 +103,7 @@ if __name__ == "__main__":
                         help="Model upscale factor")
     parser.add_argument("--model_weights_path",
                         type=str,
-                        default="./results/pretrained_models/LTE_EDSR_x4-DIV2K-91316a4b.pth.tar",
+                        default="./results/pretrained_models/LIIF_EDSR_x4-DIV2K-91316a4b.pth.tar",
                         help="Model weights file path.")
     parser.add_argument("--device_type",
                         type=str,
