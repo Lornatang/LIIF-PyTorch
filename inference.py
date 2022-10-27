@@ -103,7 +103,7 @@ if __name__ == "__main__":
                         help="Model upscale factor")
     parser.add_argument("--model_weights_path",
                         type=str,
-                        default="./results/pretrained_models/LIIF_EDSR_x4-DIV2K-91316a4b.pth.tar",
+                        default="./results/pretrained_models/LIIF_EDSR_x4-DIV2K-cc1955cd.pth.tar",
                         help="Model weights file path.")
     parser.add_argument("--device_type",
                         type=str,

@@ -47,7 +47,7 @@ modify the `config.py`
 - line 31: `model_arch_name` change to `liif_edsr`.
 - line 36: `upscale_factor` change to `4`.
 - line 38: `mode` change to `test`.
-- line 88: `model_weights_path` change to `./results/pretrained_models/LIIF_EDSR_x4-DIV2K-91316a4b.pth.tar`.
+- line 88: `model_weights_path` change to `./results/pretrained_models/LIIF_EDSR_x4-DIV2K-cc1955cd.pth.tar`.
 -
 
 ```bash
@@ -85,14 +85,12 @@ Source of original paper results: [https://arxiv.org/pdf/2012.09161v2.pdf](https
 
 In the following table, the psnr value in `()` indicates the result of the project, and `-` indicates no test.
 
-|  Method  | Scale |      Set5 (PSNR/SSIM)      |     Set14 (PSNR/SSIM)      | 
-|:--------:|:-----:|:--------------------------:|:--------------------------:|
-| LIIF_EDSR |   2   |     -(**-**)/-(**-**)      |     -(**-**)/-(**-**)      | 
-| LIIF_EDSR |   3   |     -(**-**)/-(**-**)      |     -(**-**)/-(**-**)      |
-| LIIF_EDSR |   4   | -(**32.12**)/-(**0.8653**) | -(**28.50**)/-(**0.7811**) | 
+|  Method   | Scale |      Set5 (PSNR/SSIM)      |     Set14 (PSNR/SSIM)      | 
+|:---------:|:-----:|:--------------------------:|:--------------------------:|
+| LIIF_EDSR |   4   | -(**32.15**)/-(**0.8955**) | -(**28.46**)/-(**0.7807**) | 
 
 ```bash
-# Download `LIIF_EDSR_x4-DIV2K-91316a4b.pth.tar.pth.tar` weights to `./results/pretrained_models`
+# Download `LIIF_EDSR_x4-DIV2K-cc1955cd.pth.tar.pth.tar` weights to `./results/pretrained_models`
 # More detail see `README.md<Download weights>`
 python3 ./inference.py
 ```
@@ -107,7 +105,7 @@ Output:
 
 ```text
 Build `liif_edsr` model successfully.
-Load `liif_edsr` model weights `./results/pretrained_models/LIIF_EDSR_x4-DIV2K-91316a4b.pth.tar` successfully.
+Load `liif_edsr` model weights `./results/pretrained_models/LIIF_EDSR_x4-DIV2K-cc1955cd.pth.tar` successfully.
 SR image save to `./figure/baboon_lr.png`
 ```
 
